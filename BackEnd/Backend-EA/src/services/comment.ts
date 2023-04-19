@@ -3,9 +3,6 @@ import CommentModel from "../models/comment";
 import paginate from 'mongoose-paginate-v2';
 import PublicationModel from "../models/publication";
 
-
-
-
 // (1) Get (obtain) comments ...
 const getCommentsPublication = async(idPublication: string, numPage: string) => {
     const comentariosPorPagina = 2;

@@ -1,10 +1,10 @@
 <h1 align="center"> LPlan </h1>
 
 <p align="center">
-  <img width="46" height="50" src="https://grupo3ea.files.wordpress.com/2023/02/lamasia.png">
+  <img width="138" height="150" src="https://grupo3ea.files.wordpress.com/2023/02/lamasia.png">
 </p>
 
-### Instalación 🔧
+### Estado del Mínimo 1 🔧
 
 ¿Qué está hecho?
 
