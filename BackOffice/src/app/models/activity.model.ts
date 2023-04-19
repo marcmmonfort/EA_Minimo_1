@@ -12,4 +12,4 @@ export interface Activity {
     roleActivity: string
     createdAt: string;
     updatedAt: string;
-}
+  }
