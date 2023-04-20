@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text-center">Session Details</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card my-5">
+          <div class="card-header">
+            <h2 *ngIf="sessionId" class="text-center">{{sessionId}}</h2>
+          </div>
+          <div class="card-body">
+            <div *ngIf="sessionData">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>User ID:</strong> {{ sessionData.userSession }}</li>
+                <li class="list-group-item"><strong>Reason:</strong> {{ sessionData.loginReason }}</li>
+                <li class="list-group-item"><strong>Login Date:</strong> {{ sessionData.loginDateSession }}</li>
+                <li class="list-group-item"><strong>Logout Date:</strong> {{ sessionData.logoutDateSession }}</li>
+              </ul>
+            </div>  
+            <div *ngIf="!sessionData" class="text-center mt-5">
+              <p>Cargando datos...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

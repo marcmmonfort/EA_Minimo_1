@@ -35,6 +35,9 @@ import { ActivityComponent } from './components/activity-components/activity/act
 import { ActivityCreateComponent } from './components/activity-components/activity-create/activity-create.component';
 import { ActivityDetailsComponent } from './components/activity-components/activity-details/activity-details.component';
 import { ActivityEditComponent } from './components/activity-components/activity-edit/activity-edit.component';
+import { SessionComponent } from './components/session-components/session/session.component';
+import { SessionDetailsComponent } from './components/session-components/session-details/session-details.component';
+import { SessionEditComponent } from './components/session-components/session-edit/session-edit.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -67,7 +70,11 @@ const routes: Routes = [
   { path:'activity',component: ActivityComponent },
   { path:'activity-create',component: ActivityCreateComponent },
   { path:'activity-details/:id',component: ActivityDetailsComponent },
-  { path:'activity-edit/:id',component: ActivityEditComponent }
+  { path:'activity-edit/:id',component: ActivityEditComponent },
+
+  { path:'session',component: SessionComponent },
+  { path:'session-details/:id',component: SessionDetailsComponent },
+  { path:'session-edit/:id',component: SessionEditComponent }
 
 ];
 
@@ -104,6 +111,9 @@ const routes: Routes = [
     ActivityCreateComponent,
     ActivityDetailsComponent,
     ActivityEditComponent,
+    SessionComponent,
+    SessionDetailsComponent,
+    SessionEditComponent,
   ],
   imports: [
     BrowserModule,

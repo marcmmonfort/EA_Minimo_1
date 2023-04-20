@@ -1,0 +1,60 @@
+<confirmation-modal
+  [isOpen]="isModalOpen"
+  (acceptChanges)="onAcceptChanges()"
+  (cancelChanges)="onCancelChanges()"
+></confirmation-modal>
+
+<form (ngSubmit)="onSubmit()">
+  
+    <div class="form-group">
+        <label for="userSession">User ID:</label>
+        <input 
+            type="string"
+            class="form-control"
+            id="userSession"
+            name="userSession"
+            [(ngModel)]="sessionData.userSession"
+            required
+            readonly
+            />
+      </div>
+
+    <div class="form-group">
+        <label for="loginReason">Reason:</label>
+        <input 
+            type="string"
+            class="form-control"
+            id="loginReason"
+            name="loginReason"
+            [(ngModel)]="sessionData.loginReason"
+            required
+            />
+      </div>
+
+    <div class="form-group">
+        <label for="loginDateSession">Login Date:</label>
+        <input 
+            type="string"
+            class="form-control"
+            id="loginDateSession"
+            name="loginDateSession"
+            [(ngModel)]="sessionData.loginDateSession"
+            required
+            readonly
+            />
+      </div>
+
+    <div class="form-group">
+        <label for="logoutDateSession">Logout Date:</label>
+        <input 
+            type="string"
+            class="form-control"
+            id="logoutDateSession"
+            name="logoutDateSession"
+            [(ngModel)]="sessionData.logoutDateSession"
+            readonly
+            />
+      </div>
+
+  <button class="btn btn-primary" (click)="openModal()">Guardar cambios</button>
+</form>

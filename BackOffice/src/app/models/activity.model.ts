@@ -1,5 +1,5 @@
 export interface Activity {
-    _id?: string
+    _id: string
     nameActivity: string
     creatorActivity: string
     participantsActivity?: [string]

@@ -18,5 +18,12 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label for="loginReason">Login Reason:</label>
+        <input type="string" id="loginReason" formControlName="loginReason" class="form-control">
+        <div *ngIf="loginForm.controls.loginReason.invalid && (loginForm.controls.loginReason.dirty || loginForm.controls.loginReason.touched)">
+          <div *ngIf="loginForm.controls.loginReason.errors.required">Este campo es requerido.</div>
+        </div>
+      </div>
   
     <button class="btn btn-primary">Acceder</button></form>
