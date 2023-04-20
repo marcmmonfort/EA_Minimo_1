@@ -24,23 +24,25 @@ export class NavigationComponent implements OnInit {
       this.userKnown = userKnown;
     });
 
-    this.sessionShareService.getSessionShare().subscribe((data: Session) => {
-      this.sessionData = data;
-      this.sessionId = this.sessionData._id;
-    });
-
-    console.log("(Recibido) User ID:",this.sessionData.userId);
-    console.log("(Recibido) Login Date:",this.sessionData.loginDateSession);
-    console.log("(Recibido) Logout Date:",this.sessionData.logoutDateSession);
-    console.log("(Recibido) Login Reason:",this.sessionData.loginReason);
+    if (this.userKnown=true){ // Una vez hemos entrado al home ...
+      this.sessionShareService.getSessionShare().subscribe((data: Session) => {
+        this.sessionData = data;
+        this.sessionId = this.sessionData._id;
+        
+        console.log("(Recibido) User ID:",this.sessionData.userSession);
+        console.log("(Recibido) Login Date:",this.sessionData.loginDateSession);
+        console.log("(Recibido) Logout Date:",this.sessionData.logoutDateSession);
+        console.log("(Recibido) Login Reason:",this.sessionData.loginReason);
+      });
+    }
   }
 
   LogOut(): void{
-    this.knownService.updateUserKnown(false);
-
     // Aquí quiero hacer Update de la sesión para poder guardar la fecha de cuando se ha cerrado ...
     this.sessionData.logoutDateSession = new Date().toISOString();
     this.sessionService.editSession(this.sessionData, this.sessionId);
+
+    this.knownService.updateUserKnown(false);
     }
     
 }

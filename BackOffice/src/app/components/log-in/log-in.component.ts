@@ -57,7 +57,7 @@ export class LogInComponent {
         sessionData.loginDateSession = loginDate;
         sessionData.userSession = userId;
 
-        console.log("User ID:",sessionData.userId);
+        console.log("User ID:",sessionData.userSession);
         console.log("Login Date:",sessionData.loginDateSession);
         console.log("Logout Date:",sessionData.logoutDateSession);
         console.log("Login Reason:",sessionData.loginReason);
@@ -83,55 +83,5 @@ export class LogInComponent {
         this.router.navigate(['/register']);
       });
   }
-
-  /* AQUÍ PONDRÉ LO DE CREAR LA SESIÓN ...
-
-   
-    this.commentForm = this.formBuilder.group({
-      "idUserComment": ['', Validators.required],
-      "idPublicationComment": ['', Validators.required],
-      "textComment": ['', Validators.required]
-      })
-  }
-
-  get f() {
-    return this.commentForm.controls;
-  }
-
-  onSubmit(): void {
-    if (this.commentForm.invalid) {
-      return;
-    }
-    this.openModal();
-  }
-  confirmChanges(): void {
-    const commentData = this.commentForm.value;
-    console.log(commentData);
-    this.commentService.addComment(commentData).subscribe(
-      (response) => {
-        console.log('Localización guardada correctamente:', response);
-        // Aquí podrías redirigir a la página de éxito, por ejemplo
-      },
-      (error) => {
-        console.error('Error al guardar location:', error);
-        // Aquí podrías mostrar un mensaje de error al usuario
-      }
-    );
-    this.closeModal();
-  }
-  onAcceptChanges(): void {
-    this.confirmChanges();
-  }
-  onCancelChanges(): void {
-    this.isModalOpen = false;
-  }
-  openModal(): void {
-    this.isModalOpen = true;
-  }
-  closeModal(): void {
-    this.isModalOpen = false;
-  }
-
-  */
 
 }

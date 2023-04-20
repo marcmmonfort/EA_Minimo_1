@@ -17,4 +17,4 @@ El del exámen es el siguiente.
 
 ¿Qué falta por hacer?
 
-* _Lo que quiero hacer es que, cuando se haga el "Logout", se actualize la "Session" poniendo la hora a la que ésta se ha cerrado. Para ello, he creado un servicio compartido entre el "Login" y el "Navigation" (que es donde está el botón de Logout) para que se pueda pasar la información de la sesión y simplemente, al pulsar el botón "Logout", se actualize con la fecha de finalización. La idea es esta pero por algún motivo no se acaba de pasar bien la información y por eso no se guarda la actualización._
+* _Lo que quiero hacer es que, cuando se haga el "Logout", se actualize la "Session" poniendo la hora a la que ésta se ha cerrado. Para ello, he creado un servicio compartido entre el "Login" y el "Navigation" (que es donde está el botón de Logout) para que se pueda pasar la información de la sesión y simplemente, al pulsar el botón "Logout", se actualize con la fecha de finalización. He conseguido que se pase la información bien (por lo tanto navigation tiene la info de la "Session") pero no me ha dado tiempo a completar que se guarde bien la fecha de fin se "Session" cuando le doy a "Logout")._
