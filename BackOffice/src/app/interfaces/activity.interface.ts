@@ -7,7 +7,7 @@ export interface Activity {
     dateActivity: string
     hoursActivity: [string]
     idLocation?: string
-    descriptionActivity: string
+    descriptionActivity?: string
     privacyActivity: boolean
     roleActivity: string
     createdAt: string;

@@ -62,10 +62,12 @@ const routes: Routes = [
   { path:'publication',component: PublicationComponent },
   { path:'publication-create',component: PublicationCreateComponent },
   { path:'publication-details/:id',component: PublicationDetailsComponent },
-  { path:'publication-edit/:id',component: PublicationEditComponent }
+  { path:'publication-edit/:id',component: PublicationEditComponent },
 
-
-
+  { path:'activity',component: ActivityComponent },
+  { path:'activity-create',component: ActivityCreateComponent },
+  { path:'activity-details/:id',component: ActivityDetailsComponent },
+  { path:'activity-edit/:id',component: ActivityEditComponent }
 
 ];
 
